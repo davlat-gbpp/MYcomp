@@ -8,7 +8,7 @@ class Product(models.Model):
     """category привязана к категориям товара и его характеристикам"""
 
 """Характеристики разной техники"""
-class LoptopCharacteristics():
+class LoptopCharacteristics(models.Model):
     brand = models.CharField(max_length=32)
     model = models.CharField(max_length=16)
     display = models.CharField(max_length=16)
@@ -20,7 +20,7 @@ class LoptopCharacteristics():
     keyboard_language = models.CharField(max_length=32)
     fk_product = models.ForeignKey()
 
-class PCCharacteristics():
+class PCCharacteristics(models.Model):
     brand = models.CharField(max_length=32)
     model = models.CharField(max_length=16)
     cpu = models.CharField(max_length=32)
@@ -31,7 +31,7 @@ class PCCharacteristics():
     connection = models.CharField(max_length=16)
     fk_product = models.ForeignKey()
 
-class MonitorCharacteristics():
+class MonitorCharacteristics(models.Model):
     brand = models.CharField(max_length=32)
     model = models.CharField(max_length=16)
     size = models.FloatField() 
@@ -39,7 +39,7 @@ class MonitorCharacteristics():
     frame_rate = models.IntegerField()    
     fk_product = models.ForeignKey()
 
-class KeyboardCharacteristics():
+class KeyboardCharacteristics(models.Model):
     brand = models.CharField(max_length=32)
     model = models.CharField(max_length=16)
     connection = models.CharField(max_length=16)
@@ -47,7 +47,7 @@ class KeyboardCharacteristics():
     keyboard_language = models.CharField(max_length=32)
     fk_product = models.ForeignKey()
 
-class MouseCharacteristics():
+class MouseCharacteristics(models.Model):
     brand = models.CharField(max_length=32)
     model = models.CharField(max_length=16)
     sensor = models.CharField()
@@ -55,7 +55,7 @@ class MouseCharacteristics():
     cable_length = models.FloatField()
     fk_product = models.ForeignKey()
    
-class MicrophoneCharacteristics():
+class MicrophoneCharacteristics(models.Model):
     brand = models.CharField(max_length=32)
     model = models.CharField(max_length=16)
     mic_type = models.CharField()
@@ -65,7 +65,7 @@ class MicrophoneCharacteristics():
     cable_length = models.FloatField()
     fk_product = models.ForeignKey()
     
-class HeadphonesCharacteristics():
+class HeadphonesCharacteristics(models.Model):
     brand = models.CharField(max_length=32)
     model = models.CharField(max_length=16)
     noise_reduction = models.BooleanField(default=False)
